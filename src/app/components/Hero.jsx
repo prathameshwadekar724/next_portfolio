@@ -95,9 +95,9 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl shadow-lg shadow-sky-500/40 overflow-hidden bg-slate-800">
+          {/* <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl shadow-lg shadow-sky-500/40 overflow-hidden bg-slate-800">
             <Image
-              src="#"   // <--- your image from public folder
+              src="/profile.png"   // <--- your image from public folder
               alt="PW"
               width={1000}
               height={1000}
@@ -105,7 +105,12 @@ export default function Hero() {
               priority
             />
             <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_60%)]" />
+          </div> */}
+          <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl bg-gradient-to-br from-sky-500 to-indigo-500 shadow-lg shadow-sky-500/40 flex items-center justify-center overflow-hidden">
+            <span className="text-5xl md:text-6xl font-bold">PW</span>
+            <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_60%)]" />
           </div>
+
         </motion.div>
       </div>
     </section>
