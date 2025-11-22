@@ -1,0 +1,15 @@
+export const skills = [
+  "Java",
+  "Firebase",
+  "Flutter",
+  "JavaScript",
+  "React & Next.js",
+  "Node.js & Express",
+  "MongoDB / Mongoose",
+  "REST APIs",
+  "TailwindCSS",
+  "Git & GitHub",
+  "SQL basics",
+  "Python (ML basics)",
+  "Deployment (Vercel / Render / Netlify)",
+];
