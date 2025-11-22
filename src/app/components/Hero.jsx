@@ -97,8 +97,8 @@ export default function Hero() {
         >
           <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl shadow-lg shadow-sky-500/40 overflow-hidden bg-slate-800">
             <Image
-              src="/profile.png"   // <--- your image from public folder
-              alt="Prathamesh Wadekar"
+              src="#"   // <--- your image from public folder
+              alt="PW"
               width={1000}
               height={1000}
               className="object-cover"
