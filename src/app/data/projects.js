@@ -1,5 +1,12 @@
 export const projects = [
   {
+    "title": "Hostel Finder – Location-Based Hostel & PG Search",
+    "tech": ["Next.js", "React", "TailwindCSS", "SerpAPI", "Google Maps"],
+    "description": "A real-time hostel and PG discovery platform where users can search accommodations based on their preferred location. It fetches live data from Google Maps through SerpAPI and displays hostels with photos, ratings, reviews, contact details, and full hostel information.",
+    "liveUrl": "https://hostel-finder-azure.vercel.app/",
+    "githubUrl": "https://github.com/prathameshwadekar724/hostel_finder"
+  },
+  {
     title: "Weather Dashboard",
     tech: ["Next.js", "TailwindCSS", "Recharts", "OpenWeather API"],
     description:
@@ -29,17 +36,17 @@ export const projects = [
     description:
       "An AI-based Flutter application that generates personalized travel itineraries using the Gemini API. Users input destination and duration to receive a detailed day-wise plan with integrated maps and attractions.",
     liveUrl: "#",
-    githubUrl:"https://github.com/prathameshwadekar724/TravelAiPlanner"
+    githubUrl: "https://github.com/prathameshwadekar724/TravelAiPlanner"
   },
   {
     title: "Efficient Volunteer Management System",
     tech: ["Java", "XML", "Firebase"],
     description:
       "An Android application for managing volunteers and events, featuring leaderboards, ratings, dark mode, and email verification. Integrated with Firebase for real-time data storage and updates.",
-    liveUrl:"#",
+    liveUrl: "#",
     githubUrl: "https://github.com/prathameshwadekar724/Android-App/tree/main/Android",
   },
-   {
+  {
     title: "Real-time Indian Sign Language Prediction System",
     tech: ["MediaPipe", "TensorFlow", "Flask", "React"],
     description:
