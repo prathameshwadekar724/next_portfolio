@@ -5,37 +5,27 @@ import SectionHeading from "./SectionHeading";
 
 export default function About() {
   return (
-    <section className="section-padding bg-slate-900/40" id="about">
+    <section className="relative section-padding" id="about">
       <div className="max-w-4xl mx-auto px-4">
-        <SectionHeading id="about" label="About" title="About Me" />
+        <SectionHeading id="about" label="Engineering Philosophy" title="Delivering Measurable Business Value" />
 
         <motion.div
-          className="text-slate-300 text-sm md:text-base leading-relaxed space-y-4 bg-slate-900/60 border border-white/5 rounded-2xl p-6 md:p-8"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-slate-700 text-base leading-relaxed space-y-6 bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-8 md:p-10 shadow-lg hover:border-blue-500/40 transition duration-300"
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.5 }}
         >
           <p>
-            I’m a passionate <span className="text-sky-300 font-medium">Full Stack Developer</span>,
-            <span className="text-sky-300 font-medium">Android Developer</span> who loves building 
-            clean, intuitive, and high-performance applications. I enjoy working across the entire 
-            stack — from crafting responsive UIs to developing efficient backend systems.
+            As a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 font-semibold">Full-Stack Freelance Engineer</span> and <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600 font-semibold">Mobile Application Developer</span>, I specialize in building custom, high-converting digital products for startups, SMBs, and product teams.
           </p>
 
           <p>
-            With experience in both design and development, I bridge the gap between aesthetics
-            and functionality. I love taking ideas, refining them, and turning them into 
-            real-world, production-ready applications using technologies like 
-            <span className="text-sky-300 font-medium"> MERN, Next.js, Node.js, and Android (Java/Flutter)</span>.
+            Whether engineering rapid SaaS MVPs using <span className="text-blue-700 font-semibold">MERN & Next.js</span>, deploying cross-platform mobile apps with <span className="text-blue-700 font-semibold">Android & Flutter</span>, or automating operations via <span className="text-blue-700 font-semibold">Python & LLM APIs</span>, my core focus is combining sleek visual design with bulletproof backend architecture.
           </p>
 
           <p>
-            I’m always excited to explore new technologies, solve challenging problems, and
-            continuously improve my skills. Currently, I’m working on projects like a
-            <span className="font-semibold"> Student Attendance Management System</span>, a modern
-            <span className="font-semibold"> Weather Dashboard</span>, and a prototype of a
-            <span className="font-semibold"> Real-time Indian Sign Language Interpreter</span>.
+            I collaborate directly with clients to turn complex business requirements into clean, production-ready systems — built for speed, conversion, and long-term scalability.
           </p>
         </motion.div>
       </div>

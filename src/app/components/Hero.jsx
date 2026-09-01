@@ -1,115 +1,126 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, Calendar, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="section-padding flex items-center justify-center"
+      className="relative section-padding flex items-center justify-center pt-32 md:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-slate-100/80 via-slate-50 to-slate-50"
     >
-      <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+      {/* SOFT AMBIENT LIGHT BACKGROUND ACCENTS */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-200/50 via-violet-200/30 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 -right-32 w-96 h-96 bg-violet-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
+
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.6fr,1.1fr] gap-12 items-center">
 
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          {/* TOP LINE */}
-          <p className="text-sm text-sky-400 mb-2">Hi, I&apos;m Prathamesh 👋</p>
+          {/* STATUS PILL BADGE */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600" />
+            </span>
+            <span>Available for Freelance Projects & Scoping</span>
+            <Sparkles size={14} className="text-violet-600 ml-1" />
+          </div>
 
-          {/* TITLE YOU PROVIDED */}
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-3">
-            Full Stack Developer <span className="text-sky-400">|</span>{" "}
-            Android Developer
+          {/* MAIN HEADLINE */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
+            Engineering Scalable Systems that{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600">
+              Drive Revenue
+            </span>
           </h1>
 
-          {/* NEW ABOUT CONTENT YOU PROVIDED */}
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-5">
-            I&apos;m a passionate developer with a love for creating beautiful,
-            intuitive, and high-performance applications. With experience in both
-            design and development, I bridge the gap between aesthetics and
-            functionality. I&apos;m always eager to learn new technologies and take
-            on challenging projects.
+          {/* BUSINESS OUTCOME STATEMENT */}
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
+            I build high-performance web and Android applications that streamline business operations and maximize client conversion rates. From scalable SaaS MVPs to custom mobile platforms, I partner with product teams to turn technical concepts into market-ready assets.
           </p>
 
-          {/* OLD TEXT (OPTIONAL) — KEEP OR REMOVE */}
-          <p className="text-slate-400 text-sm md:text-base mb-6">
-            Currently working with MERN, Next.js, and Android development,
-            while exploring real-world systems like Attendance Management,
-            Weather Dashboard, and a prototype of an ISL Interpreter.
-          </p>
-
-          {/* BUTTONS */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            <a
-              href="#projects"
-              className="px-5 py-2.5 rounded-full bg-sky-500 hover:bg-sky-600 text-sm font-medium transition"
-            >
-              View Projects
-            </a>
+          {/* ACTION BUTTONS */}
+          <div className="flex flex-wrap items-center gap-4 mb-10">
             <a
               href="#contact"
-              className="px-5 py-2.5 rounded-full border border-sky-500/60 text-sky-300 text-sm hover:bg-sky-500/10 transition"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-semibold text-sm transition-all duration-300 shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02]"
             >
-              Contact Me
+              <Calendar size={18} /> Book a Technical Scoping Call
+            </a>
+            <a
+              href="#services"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white border border-slate-200/80 hover:border-blue-500 text-slate-800 hover:text-blue-600 text-sm font-medium hover:scale-[1.02] transition-all duration-300 shadow-sm"
+            >
+              Explore Services <ArrowRight size={18} />
             </a>
           </div>
 
-          {/* SOCIAL ICONS */}
-          <div className="flex items-center gap-4 text-slate-300">
-            <span className="text-xs uppercase tracking-[0.25em]">Connect</span>
+          {/* DIRECT CONNECT */}
+          <div className="flex items-center gap-4 text-slate-500 pt-2">
+            <span className="text-xs uppercase tracking-[0.25em] text-slate-500 font-semibold">Direct Connect</span>
+            <div className="h-4 w-px bg-slate-300" />
 
             <a
               href="https://github.com/prathameshwadekar724"
               target="_blank"
-              className="p-2 rounded-full border border-white/10 hover:border-sky-400 hover:text-sky-400 transition"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-blue-500 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm"
+              aria-label="GitHub Profile"
             >
               <Github size={18} />
             </a>
 
             <a
-              href="https://linkedin.comlinkedin.com/in/prathamesh-wadekar-a3402125b"
+              href="https://linkedin.com/in/prathamesh-wadekar-a3402125b"
               target="_blank"
-              className="p-2 rounded-full border border-white/10 hover:border-sky-400 hover:text-sky-400 transition"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-blue-500 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm"
+              aria-label="LinkedIn Profile"
             >
               <Linkedin size={18} />
             </a>
 
             <a
               href="mailto:prathameshwadekar13@gmail.com"
-              className="p-2 rounded-full border border-white/10 hover:border-sky-400 hover:text-sky-400 transition"
+              className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-blue-500 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm"
+              aria-label="Email Contact"
             >
               <Mail size={18} />
             </a>
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE LOGO BOX */}
+        {/* RIGHT SIDE PROFILE CONTAINER */}
         <motion.div
           className="flex justify-center md:justify-end"
-          initial={{ opacity: 0, scale: 0.9, y: 30 }}
+          initial={{ opacity: 0, scale: 0.92, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
         >
-          <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl shadow-lg shadow-sky-500/40 overflow-hidden bg-slate-800">
-            <Image
-              src="/profile.jpg"   // <--- your image from public folder
-              alt="PW"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_60%)]" />
+          <div className="relative group">
+            {/* AMBIENT GLOW BEHIND CARD */}
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-400 to-violet-400 blur-xl opacity-40 group-hover:opacity-70 transition duration-500" />
+            
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[26rem] rounded-3xl bg-white p-2.5 border border-slate-200/90 shadow-2xl overflow-hidden">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-100">
+                <Image
+                  src="/profile.jpeg"
+                  alt="Prathamesh Wadekar - Full-Stack & Mobile Engineer"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition duration-500"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent opacity-40" />
+              </div>
+            </div>
           </div>
-          {/* <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl bg-gradient-to-br from-sky-500 to-indigo-500 shadow-lg shadow-sky-500/40 flex items-center justify-center overflow-hidden">
-            <span className="text-5xl md:text-6xl font-bold">PW</span>
-            <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_60%)]" />
-          </div> */}
-
         </motion.div>
       </div>
     </section>
