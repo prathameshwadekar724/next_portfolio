@@ -118,59 +118,58 @@ export default function CredentialsSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-3xl w-full bg-white rounded-3xl p-4 sm:p-6 shadow-2xl border border-slate-200 overflow-hidden"
+              className="relative max-w-4xl w-full bg-white rounded-3xl p-5 sm:p-6 shadow-2xl border border-slate-200 overflow-hidden"
             >
               {/* MODAL HEADER */}
-              <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 mb-4">
+              <div className="flex items-center justify-between gap-4 pb-3 border-b border-slate-100 mb-3">
                 <div>
                   <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
                     {selectedImage.title}
                   </h4>
-                  <p className="text-xs text-slate-500 mt-0.5">
+                  <p className="text-xs text-slate-500">
                     {selectedImage.organization}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setSelectedImage(null)}
-                  aria-label="Close certificate preview"
-                  className="p-2 rounded-full hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
-                >
-                  <X size={20} />
-                </button>
+                <div className="flex items-center gap-2">
+                  {selectedImage.file && (
+                    <a
+                      href={selectedImage.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
+                      title="Open full resolution in new tab"
+                    >
+                      <span>New Tab</span>
+                      <ExternalLink size={13} />
+                    </a>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedImage(null)}
+                    aria-label="Close certificate preview"
+                    className="p-1.5 rounded-full hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
               </div>
 
               {/* IMAGE DISPLAY */}
-              <div className="relative max-h-[70vh] flex items-center justify-center overflow-auto rounded-xl bg-slate-50 border border-slate-100 p-2">
+              <div className="relative flex items-center justify-center rounded-2xl overflow-hidden bg-slate-900/5 p-1">
                 {selectedImage.file ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
                     src={selectedImage.file}
                     alt={`Certificate for ${selectedImage.title}`}
-                    className="max-h-[65vh] w-auto rounded-lg object-contain"
+                    className="w-full max-h-[75vh] object-contain rounded-xl shadow-md"
                   />
                 ) : (
-                  <div className="py-12 flex flex-col items-center gap-2 text-slate-400">
+                  <div className="py-16 flex flex-col items-center gap-2 text-slate-400">
                     <ImageIcon size={36} />
                     <span className="text-sm">Image preview unavailable</span>
                   </div>
                 )}
               </div>
-
-              {/* MODAL FOOTER */}
-              {selectedImage.file && (
-                <div className="pt-4 flex justify-end">
-                  <a
-                    href={selectedImage.file}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
-                  >
-                    <span>Open in full tab</span>
-                    <ExternalLink size={14} />
-                  </a>
-                </div>
-              )}
             </motion.div>
           </motion.div>
         )}
