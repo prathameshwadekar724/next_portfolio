@@ -1,65 +1,106 @@
 export const projects = [
   {
-    title: "Location-Based Mapping Platform",
-    tech: ["Next.js", "React", "TailwindCSS", "SerpAPI", "Google Maps API"],
-    challenge: "Travelers and students face friction finding verified accommodations due to scattered, outdated, and unindexed local listings.",
-    solution: "Engineered a high-speed discovery platform integrating SerpAPI & Google Maps to fetch dynamic photo galleries, geolocation filters, dynamic ratings, and live property data.",
-    impact: "Reduced user search latency by 40% and improved property discovery conversion through an integrated map interface.",
-    liveUrl: "https://hostel-finder-azure.vercel.app/",
-    githubUrl: "https://github.com/prathameshwadekar724/hostel_finder",
+    title: "Indian Sign Language Recognition System",
+    tag: "Final-Year Engineering Project",
+    tech: ["MediaPipe", "TensorFlow", "Python", "Flask", "React"],
+    problem:
+      "Individuals with speech and hearing impairments encounter communication barriers during daily interactions due to the lack of real-time sign language translation tools.",
+    features:
+      "Real-time video stream hand keypoint extraction using MediaPipe, gesture classification via a trained TensorFlow deep learning model, and Flask REST API streaming to a responsive React frontend.",
+    status:
+      "Academic capstone project focused on computer vision keypoint tracking, model inference, and real-time gesture prediction.",
+    liveUrl: "#",
+    githubUrl: "#",
   },
   {
-    title: "Automated Employee/Student Operations Dashboard",
-    tech: ["MERN Stack", "JWT Auth", "Flowbite React", "Express"],
-    challenge: "Manual attendance tracking created administrative bottlenecks, reporting errors, and a complete lack of real-time multi-department oversight.",
-    solution: "Developed an enterprise role-based management dashboard featuring JWT authentication, granular class/department filters, and real-time attendance log auditing.",
-    impact: "Streamlined administrative workflows, reducing manual tracking overhead by 60% with instant automated record-keeping.",
-    liveUrl: "https://erp-present.netlify.app/login",
-    githubUrl: "https://github.com/prathameshwadekar724/attendance_frontend",
+    title: "BugTrace – Website Failure Analyzer",
+    tag: "Web Health & Diagnostic Tool",
+    tech: ["Node.js", "Express.js", "React", "REST APIs", "Tailwind CSS"],
+    problem:
+      "Silent website failures, broken internal links, and unresponsive HTTP endpoints degrade user experience and go unnoticed without automated diagnostics.",
+    features:
+      "Automated URL endpoint scanning, HTTP response code verification, broken resource detection, request latency monitoring, and structured diagnostic summaries.",
+    status:
+      "Diagnostic scanning utility for inspecting web application health, identifying broken endpoints, and reporting failure causes.",
+    liveUrl: "#",
+    githubUrl: "#",
   },
   {
-    title: "AI-Driven Cross-Platform Travel Infrastructure",
-    tech: ["Flutter", "Dart", "Gemini API", "Firebase"],
-    challenge: "Planning personalized multi-day travel itineraries requires hours of manual research across fragmented travel sites.",
-    solution: "Architected a cross-platform mobile application powered by Google Gemini API that synthesizes destination parameters into automated day-by-day itineraries with attraction mappings.",
-    impact: "Cut itinerary generation time from hours to seconds while delivering a smooth 60fps native mobile experience.",
+    title: "TravelAiPlanner",
+    tag: "AI & Mobile Application",
+    tech: ["Flutter", "Dart", "Google Gemini API", "Firebase"],
+    problem:
+      "Planning customized multi-day travel itineraries requires hours of manual research across fragmented websites and blogs.",
+    features:
+      "Synthesizes travel destinations, duration, and preferences into personalized day-by-day itineraries using the Google Gemini API, complete with route highlights and map points.",
+    status:
+      "Cross-platform Flutter mobile application with real-time Firebase cloud storage and AI-powered plan generation.",
     liveUrl: "#",
     githubUrl: "https://github.com/prathameshwadekar724/TravelAiPlanner",
   },
   {
-    title: "Enterprise Real-Time Collaboration & Messaging Hub",
-    tech: ["React", "Vite", "Tailwind CSS", "Firebase Firestore"],
-    challenge: "Remote teams need reliable, low-latency 1-on-1 communication tools with instant presence detection and seamless security.",
-    solution: "Built a responsive real-time messaging application utilizing Firebase Firestore subscriptions, live presence tracking, and dual authentication (Google OAuth & Email/Password).",
-    impact: "Achieved sub-100ms message delivery with zero sync latency across active chat sessions.",
-    liveUrl: "https://chat-app-1ctj.vercel.app/",
-    githubUrl: "https://github.com/prathameshwadekar724/chat-app",
-  },
-  {
-    title: "High-Precision Predictive Weather Intelligence Dashboard",
-    tech: ["Next.js", "TailwindCSS", "Recharts", "OpenWeather API"],
-    challenge: "Complex raw weather metrics are often hard to interpret quickly, leading to poor visual insights for weather-dependent logistics.",
-    solution: "Created a modern weather dashboard featuring dynamic geolocation detection, animated visual alerts, interactive Recharts trend lines, and a 5-day forecast module.",
-    impact: "Enhanced operational decision-making by improving data visualization readability by 45%.",
-    liveUrl: "https://next-weather-application.vercel.app/",
-    githubUrl: "https://github.com/prathameshwadekar724/next_weather_application",
-  },
-  {
-    title: "Scalable Resource Allocation & Volunteer Management System",
-    tech: ["Android (Java)", "XML", "Firebase Realtime DB"],
-    challenge: "Non-profit organizations lack efficient tools to coordinate volunteer event rosters, verify credentials, and track participation.",
-    solution: "Designed a native Android application with live Firebase synchronization, gamified volunteer leaderboards, rating mechanisms, dark mode UI, and automated email verification.",
-    impact: "Boosted volunteer engagement by 35% through transparent real-time leaderboard recognition and instant event sign-ups.",
+    title: "Volunteer Management System (VolunVibe Hub)",
+    tag: "Web & Android Application",
+    tech: ["Java", "Android Studio", "XML", "Firebase Realtime DB"],
+    problem:
+      "Non-profit initiatives and campus drives lack centralized tools to coordinate volunteers, verify participant credentials, and manage event schedules.",
+    features:
+      "Native Android application with live Firebase synchronization, event registration rosters, rating system, gamified community leaderboards, dark mode, and email verification.",
+    status:
+      "Native mobile app integrated with Firebase for real-time volunteer activity coordination and verification.",
     liveUrl: "#",
     githubUrl: "https://github.com/prathameshwadekar724/Android-App/tree/main/Android",
   },
   {
-    title: "AI-Powered Real-Time Accessibility & Sign Language Platform",
-    tech: ["MediaPipe", "TensorFlow", "Python / Flask", "React"],
-    challenge: "Speech and hearing-impaired individuals encounter communication barriers in video streams without real-time sign language translation.",
-    solution: "Built an end-to-end computer vision platform utilizing MediaPipe hand keypoint tracking, TensorFlow deep learning models, and Flask backend streaming to translate gesture inputs live.",
-    impact: "Achieved over 92% gesture classification accuracy, demonstrating real-time computer vision translation capabilities.",
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Hostel Finder – Accommodation Search",
+    tag: "Full Stack Web Application",
+    tech: ["Next.js", "React", "Tailwind CSS", "SerpAPI", "Google Maps"],
+    problem:
+      "Students and professionals relocating to new cities face friction finding verified hostels and PGs with reliable pricing and location context.",
+    features:
+      "Real-time location-based hostel discovery using SerpAPI and Google Maps API, featuring interactive map pins, photo galleries, ratings, reviews, and direct contact details.",
+    status:
+      "Deployed and verified full stack discovery web application.",
+    liveUrl: "https://hostel-finder-azure.vercel.app/",
+    githubUrl: "https://github.com/prathameshwadekar724/hostel_finder",
+  },
+  {
+    title: "Student Attendance Management System",
+    tag: "MERN Stack Web System",
+    tech: ["MERN Stack", "JWT Auth", "Flowbite React", "Express.js"],
+    problem:
+      "Manual classroom attendance recording results in administrative delays, paper waste, and lack of real-time attendance analytics.",
+    features:
+      "Role-based authentication for administrators and teachers, class/subject filters, real-time attendance logging, and exportable summary dashboards.",
+    status:
+      "Deployed role-based attendance management system with JWT authentication.",
+    liveUrl: "https://erp-present.netlify.app/login",
+    githubUrl: "https://github.com/prathameshwadekar724/attendance_frontend",
+  },
+  {
+    title: "React Realtime Chat Application",
+    tag: "Real-Time Web Application",
+    tech: ["React", "Vite", "Tailwind CSS", "Firebase Firestore"],
+    problem:
+      "Remote peer collaboration requires lightweight, low-latency messaging platforms with instant user presence indication.",
+    features:
+      "1-on-1 private messaging with live Firestore listeners, real-time online/offline presence tracking, and dual authentication via Google OAuth and email/password.",
+    status:
+      "Deployed responsive instant messaging application with sub-second message delivery.",
+    liveUrl: "https://chat-app-1ctj.vercel.app/",
+    githubUrl: "https://github.com/prathameshwadekar724/chat-app",
+  },
+  {
+    title: "Weather Analytics Dashboard",
+    tag: "Frontend Web Application",
+    tech: ["Next.js", "Tailwind CSS", "Recharts", "OpenWeather API"],
+    problem:
+      "Standard weather reports often display cluttered tables without visual trend lines for temperature, precipitation, and multi-day forecasts.",
+    features:
+      "Automatic browser geolocation detection, animated weather gradients, interactive Recharts temperature curves, sunrise/sunset times, and 5-day forecasts.",
+    status:
+      "Deployed responsive weather dashboard integrating OpenWeather REST APIs.",
+    liveUrl: "https://next-weather-application.vercel.app/",
+    githubUrl: "https://github.com/prathameshwadekar724/next_weather_application",
   },
 ];

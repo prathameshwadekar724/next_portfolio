@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function SectionHeading({ id, label, title }) {
+export default function SectionHeading({ id, label, title, subtitle }) {
   return (
     <motion.div
       id={id}
@@ -18,6 +18,11 @@ export default function SectionHeading({ id, label, title }) {
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
         {title}
       </h2>
+      {subtitle && (
+        <p className="mt-3.5 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
+          {subtitle}
+        </p>
+      )}
     </motion.div>
   );
 }

@@ -5,10 +5,11 @@ import { useState } from "react";
 
 const links = [
   { href: "#home", label: "Home" },
-  { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -44,7 +45,7 @@ export default function Navbar() {
             href="#contact"
             className="px-5 py-2.5 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white transition-all shadow-md shadow-blue-500/20 hover:scale-105"
           >
-            Hire Me / Scoping
+            Get in Touch
           </a>
         </div>
 
@@ -79,7 +80,7 @@ export default function Navbar() {
                 className="block text-center w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold text-sm shadow-md"
                 onClick={() => setOpen(false)}
               >
-                Hire Me / Scoping Call
+                Get in Touch
               </a>
             </li>
           </ul>

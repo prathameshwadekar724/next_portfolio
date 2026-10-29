@@ -1,37 +1,33 @@
 export const skillCategories = [
   {
-    title: "Web App Development",
-    description: "High-performance SaaS MVPs, conversion landing pages & enterprise web systems.",
-    skills: [
-      "React & Next.js",
-      "Node.js & Express",
-      "MongoDB & Mongoose",
-      "RESTful API Design",
-      "TailwindCSS",
-      "State Management",
-    ],
+    title: "Programming Languages",
+    description: "Core languages used for building backend systems, web logic, and mobile applications.",
+    skills: ["Java", "JavaScript", "Python"],
   },
   {
-    title: "Native & Cross-Platform Mobile Apps",
-    description: "Production-ready Android and cross-platform apps tailored for user engagement.",
-    skills: [
-      "Android (Java / XML)",
-      "Flutter & Dart",
-      "Firebase Integration",
-      "Mobile UI/UX Optimization",
-      "Offline Sync & DBs",
-    ],
+    title: "Frontend Development",
+    description: "Modern web interfaces, responsive styling, and dynamic component-based architectures.",
+    skills: ["HTML", "CSS", "React.js", "Next.js", "Tailwind CSS"],
   },
   {
-    title: "Workflow Automation & AI Integrations",
-    description: "Intelligent AI pipelines, LLM API integrations, and business process automation.",
-    skills: [
-      "Python (Automation & ML)",
-      "Gemini & OpenAI APIs",
-      "OAuth & JWT Security",
-      "Git & GitHub Actions",
-      "Vercel / Render / Netlify Deployment",
-    ],
+    title: "Backend Development",
+    description: "Server-side architectures, RESTful API design, microservices, and backend frameworks.",
+    skills: ["Node.js", "Express.js", "Spring Boot", "REST APIs"],
+  },
+  {
+    title: "Databases",
+    description: "Relational and NoSQL data modeling, document storage, and in-memory test databases.",
+    skills: ["MySQL", "MongoDB", "Firebase", "H2"],
+  },
+  {
+    title: "Mobile Development",
+    description: "Native Android and cross-platform mobile application engineering.",
+    skills: ["Android Development", "Java", "Flutter", "Dart", "XML"],
+  },
+  {
+    title: "Tools & Environments",
+    description: "Version control, IDEs, debugging tools, and collaborative engineering environments.",
+    skills: ["Git", "GitHub", "VS Code", "IntelliJ IDEA", "Android Studio", "Postman"],
   },
 ];
 

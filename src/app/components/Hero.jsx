@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowRight, Calendar, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, FileText, Sparkles, FolderGit2 } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative section-padding flex items-center justify-center pt-32 md:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-slate-100/80 via-slate-50 to-slate-50"
+      className="relative section-padding flex items-center justify-center pt-32 md:pt-40 pb-20 overflow-hidden"
     >
       {/* SOFT AMBIENT LIGHT BACKGROUND ACCENTS */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-200/50 via-violet-200/30 to-transparent blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/3 -right-32 w-96 h-96 bg-violet-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-300/35 via-violet-300/25 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 -right-32 w-96 h-96 bg-violet-400/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.6fr,1.1fr] gap-12 items-center">
 
@@ -29,36 +29,53 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600" />
             </span>
-            <span>Available for Freelance Projects & Scoping</span>
+            <span>2026 B.Tech Graduate • Seeking Entry-Level Opportunities</span>
             <Sparkles size={14} className="text-violet-600 ml-1" />
           </div>
 
           {/* MAIN HEADLINE */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
-            Engineering Scalable Systems that{" "}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-3 text-slate-900">
+            Hi, I&apos;m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600">
-              Drive Revenue
+              Prathamesh Wadekar
             </span>
           </h1>
 
-          {/* BUSINESS OUTCOME STATEMENT */}
+          {/* ROLE SUBTITLE */}
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-700 mb-6 flex flex-wrap items-center gap-2">
+            <span>Aspiring Software Engineer</span>
+            <span className="text-blue-500 hidden sm:inline">•</span>
+            <span>Java Backend Developer</span>
+            <span className="text-blue-500 hidden sm:inline">•</span>
+            <span>Full Stack Developer</span>
+          </h2>
+
+          {/* CANDIDATE INTRODUCTION */}
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-            I build high-performance web and Android applications that streamline business operations and maximize client conversion rates. From scalable SaaS MVPs to custom mobile platforms, I partner with product teams to turn technical concepts into market-ready assets.
+            I&apos;m a 2026 B.Tech Computer Engineering graduate passionate about building practical web applications, backend systems, and mobile apps. I enjoy solving problems, learning new technologies, and turning ideas into working software through hands-on projects.
           </p>
 
           {/* ACTION BUTTONS */}
-          <div className="flex flex-wrap items-center gap-4 mb-10">
+          <div className="flex flex-wrap items-center gap-3.5 mb-10">
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-semibold text-sm transition-all duration-300 shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02]"
+              href="#projects"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-semibold text-sm transition-all duration-300 shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02]"
             >
-              <Calendar size={18} /> Book a Technical Scoping Call
+              <FolderGit2 size={17} /> View My Projects
             </a>
             <a
-              href="#services"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white border border-slate-200/80 hover:border-blue-500 text-slate-800 hover:text-blue-600 text-sm font-medium hover:scale-[1.02] transition-all duration-300 shadow-sm"
+              href="/Prathamesh_Wadekar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white border border-slate-200/90 hover:border-blue-500 text-slate-800 hover:text-blue-600 text-sm font-medium hover:scale-[1.02] transition-all duration-300 shadow-sm"
             >
-              Explore Services <ArrowRight size={18} />
+              <FileText size={17} className="text-blue-600" /> View Resume
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-slate-100/90 hover:bg-slate-200/90 border border-slate-200 text-slate-700 hover:text-slate-900 text-sm font-medium hover:scale-[1.02] transition-all duration-300 shadow-sm"
+            >
+              Contact Me <ArrowRight size={16} />
             </a>
           </div>
 
@@ -112,8 +129,9 @@ export default function Hero() {
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-100">
                 <Image
                   src="/profile.jpeg"
-                  alt="Prathamesh Wadekar - Full-Stack & Mobile Engineer"
+                  alt="Prathamesh Wadekar - Aspiring Software Engineer"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover object-top group-hover:scale-105 transition duration-500"
                   priority
                 />

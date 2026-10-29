@@ -1,13 +1,13 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Prathamesh Wadekar | Full-Stack & Mobile Engineer",
+  title: "Prathamesh Wadekar | Aspiring Software Engineer | Java & Full Stack Developer",
   icons: {
     icon: "/pic.ico",
     shortcut: "/pic.ico",
     apple: "/pic.ico",
   },
-  description: "High-performance Web & Mobile Engineer specializing in MERN, Next.js, Android, and AI automation.",
+  description: "Portfolio of Prathamesh Wadekar, 2026 B.Tech Computer Engineering graduate seeking fresher Software Engineer, Java Backend, Full Stack, and Android Developer roles.",
 };
 
 export default function RootLayout({ children }) {
