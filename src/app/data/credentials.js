@@ -9,7 +9,7 @@ export const credentials = [
     description:
       "Completed a 10-week Android Developer Virtual Internship supported by the India Edu Program and Google for Developers through AICTE and EduSkills, focusing on Android application fundamentals and mobile architecture.",
     skills: ["Android Development", "Google for Developers", "Mobile UI", "Java/Kotlin"],
-    certificateFile: "/certification/Android_certificate.pdf", // e.g. "/certificates/android-developer-internship.pdf"
+    certificateFile: "/certification/Android_certificate.png", // e.g. "/certificates/android-developer-internship.pdf"
     certificateUrl: null,  // e.g. "https://eduskillsfoundation.org/verify/..."
   },
   {
@@ -22,7 +22,7 @@ export const credentials = [
     description:
       "Completed the SAKEC One-Month Winter Internship Program as part of Cisco's Skill-A-Thon Program 2024, successfully completing intensive coursework in CCNA: Introduction to Networks.",
     skills: ["CCNA", "Computer Networks", "Cisco Skill-A-Thon"],
-    certificateFile: "/certification/cisco.pdf", // e.g. "/certificates/sakec-winter-internship.pdf"
+    certificateFile: "/certification/cisco.png", // e.g. "/certificates/sakec-winter-internship.pdf"
     certificateUrl: null,
   },
   {
@@ -35,7 +35,7 @@ export const credentials = [
       "Completed AWS Cloud Practitioner Essentials, covering foundational cloud computing concepts, AWS core infrastructure, security, identity management, architecture principles, and billing services.",
     note: "Certificate of Completion",
     skills: ["AWS", "Cloud Computing", "Cloud Architecture", "IAM"],
-    certificateFile: "/certification/AWS.pdf", // e.g. "/certificates/aws-cloud-practitioner.pdf"
+    certificateFile: "/certification/AWS.png", // e.g. "/certificates/aws-cloud-practitioner.pdf"
     certificateUrl: null,
   },
   {
@@ -47,7 +47,7 @@ export const credentials = [
     description:
       "Successfully completed CCNA: Introduction to Networks through the Cisco Networking Academy program, covering network protocols, IPv4/IPv6 addressing, Ethernet, switching concepts, and Cisco Packet Tracer configurations.",
     skills: ["Networking Protocols", "IPv4 / IPv6", "Switching & Routing", "Cisco Packet Tracer"],
-    certificateFile: "/certification/CCNCertificate.pdf", // e.g. "/certificates/ccna-introduction-to-networks.pdf"
+    certificateFile: "/certification/CCNCertificate.png", // e.g. "/certificates/ccna-introduction-to-networks.pdf"
     certificateUrl: null,
   },
   {
@@ -59,7 +59,7 @@ export const credentials = [
     description:
       "Successfully completed the comprehensive Learning Full Stack Development course offered through Infosys Springboard, covering modern frontend, backend systems, databases, and web application architecture.",
     skills: ["Full Stack Development", "Frontend & Backend", "Web Architecture"],
-    certificateFile: "/certification/FSDSpringboard.pdf", // e.g. "/certificates/infosys-full-stack.pdf"
+    certificateFile: "/certification/FSDSpringboard.png", // e.g. "/certificates/infosys-full-stack.pdf"
     certificateUrl: null,
   },
   {
@@ -71,7 +71,7 @@ export const credentials = [
     description:
       "Successfully completed the Java Programming for Beginners course offered through Infosys Springboard, covering core Java syntax, object-oriented programming (OOP) principles, control flow, and fundamental algorithms.",
     skills: ["Java", "Object-Oriented Programming (OOP)", "Core Java", "Problem Solving"],
-    certificateFile: "/certification/Java_Infosys.pdf",
+    certificateFile: "/certification/Java_Infosys.png",
     certificateUrl: null,
   },
   {
@@ -96,7 +96,7 @@ export const credentials = [
     description:
       "Presented a research paper titled 'V-Vibe: Efficient Volunteer Management using Mobile Technology' at ICSCSS 2024 (organized by Hindusthan College of Engineering and Technology), demonstrating real-time mobile coordination architectures for non-profit drives.",
     skills: ["Research Presentation", "Mobile Architecture", "ICSCSS 2024 Conference"],
-    certificateFile: "/certification/PaperPublish.pdf", // e.g. "/certificates/icscss-research-paper.pdf"
+    certificateFile: "/certification/PaperPublish.png", // e.g. "/certificates/icscss-research-paper.pdf"
     certificateUrl: null,
   },
   {

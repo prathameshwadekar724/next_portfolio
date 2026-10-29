@@ -55,7 +55,7 @@ export default function Contact() {
               <Send size={18} /> Send an Email
             </a>
             <a
-              href="https://linkedin.com/in/prathamesh-wadekar-a3402125b"
+              href="https://www.linkedin.com/in/prathamesh-wadekar13/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-50 border border-slate-200 hover:border-blue-500 text-slate-800 hover:text-blue-600 text-sm font-medium transition-all duration-300 hover:scale-105"

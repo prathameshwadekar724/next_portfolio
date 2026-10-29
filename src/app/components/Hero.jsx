@@ -95,7 +95,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://linkedin.com/in/prathamesh-wadekar-a3402125b"
+              href="https://www.linkedin.com/in/prathamesh-wadekar13/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-blue-500 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm"
