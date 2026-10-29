@@ -63,12 +63,11 @@ export default function CredentialCard({ credential, onOpenImage }) {
 
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.35 }}
-      className="group rounded-3xl bg-white/95 backdrop-blur-2xl border border-slate-200/90 p-5 sm:p-6 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/10 overflow-hidden"
+      className="group rounded-3xl bg-white border border-slate-200/90 p-5 sm:p-6 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/10 overflow-hidden"
     >
       <div>
         {/* VISUAL CERTIFICATE PREVIEW CONTAINER AT TOP OF CARD */}
@@ -96,10 +95,10 @@ export default function CredentialCard({ credential, onOpenImage }) {
 
             {/* HOVER OVERLAY WITH EXPAND BADGE */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-between p-3.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-slate-900 text-xs font-semibold shadow-lg backdrop-blur-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-slate-900 text-xs font-semibold shadow-md">
                 <Maximize2 size={13} className="text-blue-600" /> Click to Expand
               </span>
-              <span className="text-[11px] font-mono text-white bg-slate-900/70 px-2 py-0.5 rounded-md backdrop-blur-sm">
+              <span className="text-[11px] font-mono text-white bg-slate-900/80 px-2 py-0.5 rounded-md">
                 Verified
               </span>
             </div>

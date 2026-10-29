@@ -12,7 +12,7 @@ export default function CredentialsSection() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Close image modal on Escape key press
+  // Close image modal on Escape key press with zero-shift scroll lock
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === "Escape") {
@@ -21,12 +21,17 @@ export default function CredentialsSection() {
     }
     if (selectedImage) {
       window.addEventListener("keydown", handleKeyDown);
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
+      if (scrollBarWidth > 0) {
+        document.body.style.paddingRight = `${scrollBarWidth}px`;
+      }
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+        document.body.style.overflow = "";
+        document.body.style.paddingRight = "";
+      };
     }
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "unset";
-    };
   }, [selectedImage]);
 
   const filteredCredentials =
@@ -85,10 +90,7 @@ export default function CredentialsSection() {
         </div>
 
         {/* CREDENTIALS GRID */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
             {filteredCredentials.map((credential) => (
               <CredentialCard
@@ -98,85 +100,93 @@ export default function CredentialsSection() {
               />
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
 
-      {/* FULL-PAGE PORTAL LIGHTBOX (RENDERED DIRECTLY ON BODY AT Z-[100] ABOVE NAVBAR) */}
-      {selectedImage &&
-        typeof document !== "undefined" &&
+      {/* FULL-PAGE PORTAL LIGHTBOX (GLITCH-FREE HARDWARE ACCELERATED MODAL) */}
+      {typeof document !== "undefined" &&
         createPortal(
           <AnimatePresence>
-            <motion.div
-              key="lightbox-modal"
-              role="dialog"
-              aria-modal="true"
-              aria-label={`Certificate Preview: ${selectedImage.title}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedImage(null)}
-              className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-slate-950/85 backdrop-blur-md overflow-y-auto"
-            >
-              <motion.div
-                initial={{ scale: 0.95, opacity: 0, y: 15 }}
-                animate={{ scale: 1, opacity: 1, y: 0 }}
-                exit={{ scale: 0.95, opacity: 0, y: 15 }}
-                transition={{ duration: 0.25 }}
-                onClick={(e) => e.stopPropagation()}
-                className="relative max-w-4xl w-full bg-white rounded-3xl p-5 sm:p-6 shadow-2xl border border-slate-200 overflow-hidden my-auto"
+            {selectedImage && (
+              <div
+                role="dialog"
+                aria-modal="true"
+                aria-label={`Certificate Preview: ${selectedImage.title}`}
+                className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto"
               >
-                {/* MODAL HEADER */}
-                <div className="flex items-center justify-between gap-4 pb-3 border-b border-slate-100 mb-4">
-                  <div>
-                    <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-                      {selectedImage.title}
-                    </h4>
-                    <p className="text-xs text-slate-500 mt-0.5">
-                      {selectedImage.organization}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    {selectedImage.file && (
-                      <a
-                        href={selectedImage.file}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
-                        title="Open full resolution in new tab"
-                      >
-                        <span>New Tab</span>
-                        <ExternalLink size={13} />
-                      </a>
-                    )}
-                    <button
-                      type="button"
-                      onClick={() => setSelectedImage(null)}
-                      aria-label="Close certificate preview"
-                      className="p-1.5 rounded-full hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
-                    >
-                      <X size={20} />
-                    </button>
-                  </div>
-                </div>
+                {/* CLEAN SOLID BACKDROP (NO GPU BLUR FLICKER) */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.18 }}
+                  onClick={() => setSelectedImage(null)}
+                  className="fixed inset-0 bg-slate-950/85"
+                />
 
-                {/* IMAGE DISPLAY */}
-                <div className="relative flex items-center justify-center rounded-2xl overflow-hidden bg-slate-900/5 p-1">
-                  {selectedImage.file ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={selectedImage.file}
-                      alt={`Certificate for ${selectedImage.title}`}
-                      className="w-full max-h-[72vh] object-contain rounded-xl shadow-md"
-                    />
-                  ) : (
-                    <div className="py-16 flex flex-col items-center gap-2 text-slate-400">
-                      <ImageIcon size={36} />
-                      <span className="text-sm">Image preview unavailable</span>
+                {/* MODAL DIALOG CONTAINER */}
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 16 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  onClick={(e) => e.stopPropagation()}
+                  className="relative z-10 max-w-4xl w-full bg-white rounded-3xl p-5 sm:p-6 shadow-2xl border border-slate-200 overflow-hidden my-auto"
+                >
+                  {/* MODAL HEADER */}
+                  <div className="flex items-center justify-between gap-4 pb-3 border-b border-slate-100 mb-4">
+                    <div>
+                      <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
+                        {selectedImage.title}
+                      </h4>
+                      <p className="text-xs text-slate-500 mt-0.5">
+                        {selectedImage.organization}
+                      </p>
                     </div>
-                  )}
-                </div>
-              </motion.div>
-            </motion.div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      {selectedImage.file && (
+                        <a
+                          href={selectedImage.file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
+                          title="Open full resolution in new tab"
+                        >
+                          <span>New Tab</span>
+                          <ExternalLink size={13} />
+                        </a>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => setSelectedImage(null)}
+                        aria-label="Close certificate preview"
+                        className="p-1.5 rounded-full hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
+                      >
+                        <X size={20} />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* IMAGE DISPLAY */}
+                  <div className="relative flex items-center justify-center rounded-2xl overflow-hidden bg-slate-100 p-1">
+                    {selectedImage.file ? (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        src={selectedImage.file}
+                        alt={`Certificate for ${selectedImage.title}`}
+                        className="w-full max-h-[72vh] object-contain rounded-xl shadow-sm"
+                        decoding="sync"
+                      />
+                    ) : (
+                      <div className="py-16 flex flex-col items-center gap-2 text-slate-400">
+                        <ImageIcon size={36} />
+                        <span className="text-sm">Image preview unavailable</span>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              </div>
+            )}
           </AnimatePresence>,
           document.body
         )}
