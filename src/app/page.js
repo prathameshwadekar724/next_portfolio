@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen text-slate-900 bg-slate-100/60 selection:bg-blue-600 selection:text-white">
+    <div className="relative min-h-screen text-slate-900 bg-slate-100/60 selection:bg-blue-600 selection:text-white overflow-x-hidden w-full">
       {/* GLOBAL DYNAMIC ATMOSPHERIC BACKGROUND */}
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         {/* Subtle developer grid texture */}
@@ -30,7 +30,7 @@ export default function HomePage() {
       </div>
 
       <Navbar />
-      <main className="relative z-10">
+      <main className="relative z-10 overflow-x-hidden w-full">
         <Hero />
         <About />
         <Education />

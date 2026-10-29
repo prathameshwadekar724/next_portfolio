@@ -7,7 +7,7 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section className="relative section-padding" id="projects">
+    <section className="relative section-padding overflow-hidden" id="projects">
       {/* SOFT BACKGROUND GLOWS */}
       <div className="absolute top-1/4 -right-28 w-[42rem] h-[42rem] bg-gradient-to-l from-violet-300/30 via-indigo-200/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 -left-28 w-[36rem] h-[36rem] bg-gradient-to-r from-blue-300/25 via-cyan-200/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />

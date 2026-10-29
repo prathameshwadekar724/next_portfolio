@@ -16,7 +16,7 @@ const categoryIcons = {
 
 export default function Skills() {
   return (
-    <section className="relative section-padding" id="skills">
+    <section className="relative section-padding overflow-hidden" id="skills">
       {/* SOFT BACKGROUND GLOW */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[36rem] h-[36rem] bg-gradient-to-tr from-violet-300/25 via-indigo-200/20 to-blue-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
 

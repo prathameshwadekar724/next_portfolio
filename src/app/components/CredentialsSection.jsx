@@ -40,7 +40,7 @@ export default function CredentialsSection() {
       : credentials.filter((item) => item.category === activeFilter);
 
   return (
-    <section className="relative section-padding" id="certifications">
+    <section className="relative section-padding overflow-hidden" id="certifications">
       {/* SOFT AMBIENT BACKGROUND GLOW */}
       <div className="absolute top-1/2 -right-20 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-l from-indigo-300/25 via-blue-200/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-0 -left-10 w-[32rem] h-[32rem] bg-gradient-to-r from-violet-300/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />

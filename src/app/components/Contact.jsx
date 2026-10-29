@@ -6,7 +6,7 @@ import { Mail, MapPin, Linkedin, Github, FileText, Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section className="relative section-padding" id="contact">
+    <section className="relative section-padding overflow-hidden" id="contact">
       {/* SOFT BACKGROUND MESH */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-gradient-to-t from-blue-300/35 via-violet-300/25 to-transparent blur-3xl pointer-events-none -z-10" />
 

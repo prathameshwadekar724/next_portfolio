@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative section-padding flex items-center justify-center pt-32 md:pt-40 pb-20 overflow-hidden"
+      className="relative w-full section-padding flex items-center justify-center pt-32 md:pt-40 pb-20 overflow-hidden"
     >
       {/* SOFT AMBIENT LIGHT BACKGROUND ACCENTS */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-300/35 via-violet-300/25 to-transparent blur-3xl pointer-events-none -z-10" />
@@ -80,7 +80,7 @@ export default function Hero() {
           </div>
 
           {/* DIRECT CONNECT */}
-          <div className="flex items-center gap-4 text-slate-500 pt-2">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-slate-500 pt-2">
             <span className="text-xs uppercase tracking-[0.25em] text-slate-500 font-semibold">Direct Connect</span>
             <div className="h-4 w-px bg-slate-300" />
 

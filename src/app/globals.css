@@ -4,10 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-slate-100/70 text-slate-900;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Modern developer geometric grid pattern */

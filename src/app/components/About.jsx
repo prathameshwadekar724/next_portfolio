@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function About() {
   return (
-    <section className="relative section-padding" id="about">
+    <section className="relative section-padding overflow-hidden" id="about">
       {/* SOFT AMBIENT LIGHT */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[34rem] h-[34rem] bg-gradient-to-r from-blue-300/25 via-indigo-200/20 to-violet-300/25 rounded-full blur-3xl pointer-events-none -z-10" />
 
